@@ -7,7 +7,6 @@ import repositories.EmpleadoRepository;
 
 import java.sql.Date;
 import java.sql.SQLException;
-import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class EmpleadoServices {
@@ -61,7 +60,9 @@ public class EmpleadoServices {
             empleadoDAO.setApellido(nuevoEmp.getApellido());
             empleadoDAO.setOficio(nuevoEmp.getOficio());
             empleadoDAO.setIdDirector(idDirector);
-            empleadoDAO.setFechaAlta(Date.valueOf(LocalDate.now()));
+            //empleadoDAO.setFechaAlta(Date.valueOf(LocalDate.now()));
+            Date fechaSQL = new Date(nuevoEmp.getFecha_alt().getTime());
+            empleadoDAO.setFechaAlta(fechaSQL);
             empleadoDAO.setSalario(nuevoEmp.getSalario());
             empleadoDAO.setComision(nuevoEmp.getComision());
             empleadoDAO.setDepartamento(departamentoRepository.depByName(nuevoEmp.getNombreDep()));
