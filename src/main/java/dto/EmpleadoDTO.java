@@ -1,10 +1,13 @@
 package dto;
 
+import java.util.Date;
+
 public class EmpleadoDTO {
     private int idEmpleado;
     private String apellido;
     private String oficio;
     private String apeDir;
+    private Date fecha_alt;
     private float salario;
     private float comision;
     private String nombreDep;
@@ -65,5 +68,13 @@ public class EmpleadoDTO {
 
     public void setNombreDep(String nombreDep) {
         this.nombreDep = nombreDep;
+    }
+
+    public Date getFecha_alt() {
+        return fecha_alt;
+    }
+
+    public void setFecha_alt(Date fecha_alt) {
+        this.fecha_alt = fecha_alt;
     }
 }

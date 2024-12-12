@@ -4,14 +4,9 @@ import dao.EmpleadoDAO;
 import dataBase.ConnectionBD;
 
 import java.sql.*;
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.GregorianCalendar;
 
 public class EmpleadoRepository {
     ConnectionBD conBD = new ConnectionBD();
@@ -20,9 +15,9 @@ public class EmpleadoRepository {
         //instanciamos los objetos DAO donde almacenar la información que se va a recuperar
         ArrayList<EmpleadoDAO> listadoEmpleados = new ArrayList<EmpleadoDAO>();
         EmpleadoDAO empAux;
-        //SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        //creamos el formato que necesitamos que tenga
-        SimpleDateFormat formateo= new SimpleDateFormat("yyyy/MM/dd");
+        //SQLite almacena la fecha como string con el formato "YYYY-MM-DD HH:MM:SS.SSS"
+        //creamos el formato que necesitamos que tenga, prescindimos de la hora porque no la tenemos
+        SimpleDateFormat formateo= new SimpleDateFormat("yyyy-MM-dd");
         //conectamos con la base de datos asegurando la desconexión con el try with resources
         try(Connection miCon = conBD.conectarDB()){
             //instanciamos un Statement porque la consulta no tiene parámetros

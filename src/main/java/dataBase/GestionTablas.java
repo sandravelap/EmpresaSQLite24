@@ -14,7 +14,7 @@ public class GestionTablas {
             Statement stmCreate = con.createStatement();
             //ejecutamos en el SGBD la sentencia
             String createTDepartamentos ="CREATE TABLE departamentos (\n" +
-                    " dept_no  TINYINT(2) NOT NULL PRIMARY KEY,\n" +
+                    " dept_no  SMALLINT(2) NOT NULL PRIMARY KEY,\n" +
                     " dnombre  VARCHAR(15), \n" +
                     " loc      VARCHAR(15)\n" +
                     ")";
@@ -23,7 +23,7 @@ public class GestionTablas {
                     " apellido  VARCHAR(10),\n" +
                     " oficio    VARCHAR(10),\n" +
                     " dir       SMALLINT,\n" +
-                    " fecha_alt VARCHAR(10),\n" +
+                    " fecha_alt DATE,\n" +
                     " salario   FLOAT(6,2),\n" +
                     " comision  FLOAT(6,2),\n" +
                     " dept_no   TINYINT(2) NOT NULL, \n" +

@@ -79,6 +79,7 @@ public class MenuPrincipal {
                 nuevoEmpleado.setApellido(Leer.pedirCadena("Introduce el apellido del empleado:"));
                 nuevoEmpleado.setOficio(Leer.pedirCadena("Introduce el oficio del empleado:"));
                 nuevoEmpleado.setApeDir(Leer.pedirCadena("Introduce el apellido de su director:"));
+                nuevoEmpleado.setFecha_alt(Leer.pedirDate("Introduce la fecha con formato dd-MM-yyyy:"));
                 nuevoEmpleado.setSalario(Leer.pedirFloat("Introduce su salario:"));
                 nuevoEmpleado.setComision(Leer.pedirFloat("Introduce su comisión:"));
                 nuevoEmpleado.setNombreDep(Leer.pedirCadena(("Introduce el nombre del departamento al que pertenece:")));
