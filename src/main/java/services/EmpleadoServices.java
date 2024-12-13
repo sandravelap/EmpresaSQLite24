@@ -60,7 +60,9 @@ public class EmpleadoServices {
             empleadoDAO.setApellido(nuevoEmp.getApellido());
             empleadoDAO.setOficio(nuevoEmp.getOficio());
             empleadoDAO.setIdDirector(idDirector);
-            //empleadoDAO.setFechaAlta(Date.valueOf(LocalDate.now()));
+            // si cogemos la fecha de hoy del sistem:
+            // empleadoDAO.setFechaAlta(Date.valueOf(LocalDate.now()));
+            // si el usuario ha introducido la fecha y la hemos almacenado en java.util.Date, lo pasamos a sql.Date
             Date fechaSQL = new Date(nuevoEmp.getFecha_alt().getTime());
             empleadoDAO.setFechaAlta(fechaSQL);
             empleadoDAO.setSalario(nuevoEmp.getSalario());
